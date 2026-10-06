@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main-div{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.74)), 
+    url('./Images/imgi_1_pexel1.jpg');
+    height:100vh;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-position:center;   
+}
+
+.clock{
+    border: 1px solid white;
+    width:32%;
+    height: 30vh;
+    margin:0 auto;
+    position: relative;
+    top:35%;
+    border-radius:14px 2px 14px 2px;
+    box-shadow:1px 3px 2px 6px rgba(120, 245, 53, 0.5);
+    backdrop-filter:blur(15px);
+    transform: rotateX(70deg) rotateZ(-70deg);
+    transition: 1s;
+    background-color:#1c232881;
+    cursor: pointer;
+} 
+
+.clock:hover{
+    transform: none;
+}
+
+.clock h1 {
+    color:rgb(0, 255, 0);
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    justify-self: center;
+    margin-top:40px;
+    font-size: xxx-large;
+}
+
+.clock h2{
+    color:rgb(0, 255, 0);
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+    margin-top:20px;
+    font-size: xx-large;
+}
