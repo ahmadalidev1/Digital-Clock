@@ -1,53 +1,138 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main-div{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.74)), 
-    url('./Images/imgi_1_pexel1.jpg');
-    height:100vh;
-    width:100%;
+.main-div {
+    background-image:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.596),
+            rgba(0, 0, 0, 0.74)),
+        url('./Images/imgi_1_pexel1.jpg');
+
+    min-height: 100vh;
+    width: 100%;
     background-repeat: no-repeat;
-    background-size:100% 100%;
-    background-position:center;   
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.clock{
+/* Clock Box */
+.clock {
     border: 1px solid white;
-    width:32%;
+    width: 32%;
+    min-width: 320px;
     height: 30vh;
-    margin:0 auto;
-    position: relative;
-    top:35%;
-    border-radius:14px 2px 14px 2px;
-    box-shadow:1px 3px 2px 6px rgba(120, 245, 53, 0.5);
-    backdrop-filter:blur(15px);
+    min-height: 220px;
+
+    border-radius: 14px 2px 14px 2px;
+    box-shadow: 1px 3px 20px rgba(120, 245, 53, 0.5);
+    backdrop-filter: blur(15px);
+
     transform: rotateX(70deg) rotateZ(-70deg);
     transition: 1s;
-    background-color:#1c232881;
+    background-color: #1c232881;
     cursor: pointer;
-} 
 
-.clock:hover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock:hover {
     transform: none;
 }
 
+/* Time */
 .clock h1 {
-    color:rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
+    font-size: 4rem;
     text-align: center;
-    display: flex;
-    justify-items: center;
-    justify-self: center;
-    margin-top:40px;
-    font-size: xxx-large;
 }
 
-.clock h2{
-    color:rgb(0, 255, 0);
+/* Date */
+.clock h2 {
+    color: rgb(0, 255, 0);
+    font-size: 2rem;
+    margin-top: 15px;
     text-align: center;
-    justify-items: center;
-    justify-self: center;
-    margin-top:20px;
-    font-size: xx-large;
+}
+
+
+/* ===================== */
+/* TABLET */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+    .clock {
+        width: 70%;
+        min-width: auto;
+        height: 25vh;
+        transform: rotateX(50deg) rotateZ(-50deg);
+    }
+
+    .clock h1 {
+        font-size: 3rem;
+    }
+
+    .clock h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media (max-width: 480px) {
+
+    .clock {
+        width: 90%;
+        height: 22vh;
+        min-height: 180px;
+
+        transform: rotateX(25deg) rotateZ(-25deg);
+    }
+
+    .clock:hover {
+        transform: none;
+    }
+
+    .clock h1 {
+        font-size: 2.2rem;
+    }
+
+    .clock h2 {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+}
+
+
+/* ===================== */
+/* SMALL MOBILE */
+/* ===================== */
+
+@media (max-width: 360px) {
+
+    .clock {
+        width: 95%;
+        min-height: 160px;
+    }
+
+    .clock h1 {
+        font-size: 1.8rem;
+    }
+
+    .clock h2 {
+        font-size: 1rem;
+    }
 }

@@ -1,5 +1,3 @@
-alert("This is Digital Clock")
-
 const heading = document.querySelector("h1");
 const heading2 = document.querySelector("h2")
 
